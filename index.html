@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Durga Puja Kolkata 2026 — A Private Immersion Into the World's Greatest Festival</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230b0605' stroke='%23c9a24b' stroke-width='1.5'/%3E%3Cpath d='M16 7l2.6 6.4L25 16l-6.4 2.6L16 25l-2.6-6.4L7 16l6.4-2.6z' fill='%23c9a24b'/%3E%3C/svg%3E">
 <meta name="description" content="A private, curated immersion into Kolkata's Durga Puja — UNESCO Intangible Cultural Heritage. Founding season, October 2026. Groups never exceed eight guests.">
 <style>
 :root{
@@ -72,11 +73,11 @@ header{
   border-bottom:1px solid var(--border);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:var(--maxw);margin:0 auto;}
-.logo{display:flex;align-items:center;gap:10px;}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
 .logo-word{font-family:var(--serif);font-size:20px;letter-spacing:0.02em;}
 .logo-word small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:0.28em;color:var(--gold);margin-top:2px;}
-.nav-links{display:flex;gap:30px;align-items:center;}
-.nav-links a{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);transition:color .2s;}
+.nav-links{display:flex;gap:22px;align-items:center;}
+.nav-links a{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);transition:color .2s;white-space:nowrap;}
 .nav-links a:hover{color:var(--gold-light);}
 .nav-cta{border:1px solid var(--gold);padding:10px 20px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);}
 .nav-cta:hover{background:var(--gold);color:#180d05;}
@@ -192,7 +193,7 @@ section{padding:80px 0;position:relative;}
 .story-text p:last-child{margin-bottom:0;}
 
 /* ---------- CINEMA FULL-BLEED BAND (Pandals, Bisarjan) ---------- */
-.cinema-band{position:relative;min-height:500px;height:72vh;display:flex;align-items:center;overflow:hidden;}
+.cinema-band{position:relative;min-height:max(500px,72vh);display:flex;align-items:center;overflow:hidden;}
 .cinema-bg{position:absolute;inset:0;background-size:cover;background-position:center;}
 .cinema-overlay{position:absolute;inset:0;background:rgba(11,6,5,0.62);}
 .cinema-content{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:56px;width:100%;}
@@ -239,7 +240,7 @@ section{padding:80px 0;position:relative;}
 
 /* ---------- HISTORICAL ART BOX ---------- */
 .art-box{border:1px solid var(--border);background:rgba(11,6,5,0.55);padding:4px;}
-.art-box img{width:100%;display:block;filter:sepia(0.25) brightness(0.85);}
+.art-box img{width:100%;display:block;max-height:52vh;object-fit:cover;filter:sepia(0.25) brightness(0.85);}
 .art-box .art-cap{padding:14px 16px;border-top:1px solid var(--border);}
 .art-box .art-cap .ac-label{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
 .art-box .art-cap .ac-detail{font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(244,234,217,0.45);}
@@ -255,7 +256,7 @@ section{padding:80px 0;position:relative;}
 
 /* ---------- JOURNAL / BLOG ---------- */
 .journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
-.journal-card{display:block;text-decoration:none;}
+.journal-card{display:flex;flex-direction:column;text-decoration:none;}
 .journal-card .jc-img{position:relative;overflow:hidden;aspect-ratio:4/3;margin-bottom:20px;border:1px solid var(--border);}
 .journal-card .jc-img img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.82) saturate(0.88);transition:all .5s;}
 .journal-card:hover .jc-img img{transform:scale(1.04);}
@@ -265,7 +266,7 @@ section{padding:80px 0;position:relative;}
 .journal-card:hover h3{color:var(--gold-light);}
 .journal-card p{font-size:14.5px;color:rgba(244,234,217,0.6);line-height:1.7;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .journal-card .jc-meta{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(201,162,75,0.5);margin-bottom:14px;}
-.journal-card .jc-more{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+.journal-card .jc-more{margin-top:auto;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
 
 /* ---------- FOUNDER NOTE (replaces fake testimonial) ---------- */
 .founder-note{background:rgba(201,162,75,0.04);border-top:1px solid rgba(201,162,75,0.08);border-bottom:1px solid rgba(201,162,75,0.08);padding:88px 0;text-align:center;}
@@ -370,7 +371,7 @@ section{padding:80px 0;position:relative;}
 }
 .ef-field input:focus,.ef-field select:focus,.ef-field textarea:focus{outline:none;border-color:var(--gold);}
 .ef-field textarea{resize:vertical;}
-.ef-note{font-size:12px;color:var(--dim2);text-align:center;margin-top:16px;}
+.enquiry-form .ef-note{font-size:12px;color:var(--dim2);text-align:center;max-width:none;margin:16px 0 0;}
 
 /* ---------- FOOTER ---------- */
 footer{padding:70px 0 30px;border-top:1px solid var(--border);}
@@ -395,6 +396,202 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 .btn-decline{background:transparent;border:1px solid var(--border);color:var(--dim);}
 .btn-accept{background:var(--gold);border:1px solid var(--gold);color:#180d05;font-weight:600;}
 
+/* ---------- COUNTDOWN ---------- */
+.countdown{background:linear-gradient(180deg,var(--bg2),var(--bg));border-bottom:1px solid var(--border);padding:34px 0;}
+.countdown-inner{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;}
+.cd-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.cd-label b{display:block;font-family:var(--serif);font-size:20px;letter-spacing:0.02em;text-transform:none;font-weight:400;color:var(--cream);margin-top:6px;}
+.cd-clock{display:flex;gap:10px;}
+.cd-unit{min-width:76px;text-align:center;padding:12px 8px 10px;border:1px solid var(--border);border-radius:4px;background:rgba(201,162,75,0.05);}
+.cd-num{display:block;font-family:var(--serif);font-size:34px;line-height:1;color:var(--gold-light);}
+.cd-cap{display:block;margin-top:6px;font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim2);}
+.cd-note{max-width:300px;font-size:13px;color:var(--dim);}
+.cd-note a{color:var(--gold-light);border-bottom:1px solid var(--gold);}
+
+/* ---------- WHAT IS DURGA PUJA ---------- */
+.whatis-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:70px;align-items:center;}
+.whatis-grid h2{font-size:clamp(32px,4.2vw,50px);margin:14px 0 22px;line-height:1.1;}
+.whatis-grid p{color:var(--dim);font-size:15.5px;margin-bottom:16px;}
+.facts-panel{border:1px solid var(--border);border-radius:6px;background:var(--bg2);}
+.fact-row{display:flex;align-items:baseline;gap:20px;padding:26px 30px;border-bottom:1px solid var(--border);}
+.fact-row:last-child{border-bottom:none;}
+.fact-num{font-family:var(--serif);font-size:44px;line-height:1;color:var(--gold-light);min-width:150px;}
+.fact-txt{font-size:13.5px;color:var(--dim);}
+.fact-txt b{display:block;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px;}
+.dims-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-top:72px;}
+.dim-card{background:var(--bg2);padding:38px 30px;}
+.dim-card svg{width:52px;height:52px;margin-bottom:22px;}
+.dim-card h4{font-family:var(--serif);font-size:20px;margin-bottom:10px;color:var(--cream);font-weight:400;}
+.dim-card p{font-size:13.5px;color:var(--dim);}
+
+/* ---------- FIVE SACRED DAYS ---------- */
+.days-band{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.pre-days{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:-28px auto 40px;}
+.pre-chip{font-size:11.5px;letter-spacing:0.06em;color:var(--dim);border:1px dashed var(--border);border-radius:30px;padding:7px 16px;}
+.pre-chip b{color:var(--gold-light);font-weight:600;}
+.day-tabs{position:relative;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border);border-radius:6px 6px 0 0;overflow:hidden;scrollbar-width:none;}
+.day-tabs::-webkit-scrollbar{display:none;}
+.day-tab{background:var(--bg);border:none;border-right:1px solid var(--border);padding:22px 12px;color:var(--dim);cursor:pointer;font-family:var(--sans);text-align:center;transition:background .25s;position:relative;}
+.day-tab:last-child{border-right:none;}
+.day-tab .dt-roman{display:block;font-family:var(--serif);font-size:12px;letter-spacing:0.2em;color:var(--dim2);margin-bottom:6px;}
+.day-tab .dt-name{display:block;font-family:var(--serif);font-size:20px;color:var(--cream);}
+.day-tab .dt-date{display:block;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;color:var(--dim2);}
+.day-tab:hover{background:rgba(201,162,75,0.06);}
+.day-tab:focus-visible{outline:1px solid var(--gold);outline-offset:-4px;}
+.day-tab[aria-selected="true"]{background:linear-gradient(180deg,rgba(201,162,75,0.16),rgba(201,162,75,0.05));}
+.day-tab[aria-selected="true"] .dt-name{color:var(--gold-light);}
+.day-tab[aria-selected="true"]::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);}
+.day-panel{border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;background:var(--bg);padding:52px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+.day-panel[hidden]{display:none;}
+.dp-peak{display:inline-block;margin-bottom:10px;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;background:var(--gold);color:#180d05;padding:4px 10px;border-radius:2px;}
+.dp-mood{font-size:clamp(26px,3.2vw,38px);line-height:1.15;margin:12px 0 18px;}
+.dp-lead{color:var(--dim);font-size:15.5px;}
+.dp-list{list-style:none;}
+.dp-list li{font-size:14px;color:var(--dim);padding:12px 0 12px 22px;border-top:1px solid rgba(244,234,217,0.08);position:relative;}
+.dp-list li:first-child{border-top:none;padding-top:0;}
+.dp-list li::before{content:"—";color:var(--gold);position:absolute;left:0;}
+.dp-tip{margin-top:22px;padding:16px 18px;border-left:2px solid var(--gold);background:rgba(201,162,75,0.05);font-size:13.5px;color:var(--dim);}
+.dp-tip b{color:var(--gold-light);font-weight:600;}
+.days-src{text-align:center;margin-top:22px;font-size:12px;color:var(--dim2);}
+
+/* ---------- SAMPLE DAY ---------- */
+.sd-wrap{display:grid;grid-template-columns:0.8fr 1.2fr;gap:70px;align-items:start;}
+.sd-intro{position:sticky;top:120px;}
+.sd-intro h2{font-size:clamp(30px,4vw,46px);margin:14px 0 20px;line-height:1.12;}
+.sd-intro p{color:var(--dim);font-size:15.5px;margin-bottom:16px;}
+.sd-note{font-size:12.5px;color:var(--dim2);border-top:1px solid var(--border);padding-top:16px;margin-top:24px;}
+.timeline{position:relative;padding-left:34px;}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--gold),rgba(201,162,75,0.15));}
+.tl-item{position:relative;padding-bottom:36px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:'';position:absolute;left:-34px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);}
+.tl-item.hot::before{background:var(--gold);box-shadow:0 0 0 5px rgba(201,162,75,0.15);}
+.tl-time{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.tl-item h4{font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:6px;color:var(--cream);}
+.tl-item p{font-size:14px;color:var(--dim);max-width:540px;}
+
+/* ---------- CTA BRIDGE ---------- */
+.cta-bridge{padding:44px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(90deg,rgba(201,162,75,0.06),rgba(201,162,75,0.02),rgba(201,162,75,0.06));}
+.cta-bridge-in{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+.cta-bridge p{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-style:italic;color:var(--cream);max-width:640px;margin:0;line-height:1.35;}
+.cta-bridge p em{color:var(--gold-light);}
+
+/* ---------- PANDAL CIRCUITS ---------- */
+.zones-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px 6px 0 0;overflow:hidden;}
+.zone{background:var(--bg2);padding:36px 30px;display:flex;flex-direction:column;}
+.zone-tag{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.zone h3{font-size:24px;margin-bottom:6px;}
+.zone-sub{font-size:12.5px;color:var(--dim2);margin-bottom:20px;}
+.zone ul{list-style:none;flex:1;}
+.zone li{padding:13px 0;border-top:1px solid rgba(244,234,217,0.08);}
+.zone li b{display:block;font-family:var(--serif);font-weight:400;font-size:16.5px;color:var(--cream);margin-bottom:3px;}
+.zone li span{font-size:13px;color:var(--dim);}
+.zone-route{margin-top:18px;min-height:64px;font-size:12px;color:var(--dim2);border-top:1px solid var(--border);padding-top:14px;}
+.zone-route b{color:var(--gold-light);font-weight:600;}
+.zones-sat{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;overflow:hidden;}
+.pandal-foot{text-align:center;margin:34px auto 0;color:var(--dim);font-size:14px;max-width:720px;}
+
+/* ---------- TRUST BAR ---------- */
+.trust-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.trust-item{display:flex;align-items:center;gap:16px;padding:26px 24px;border-right:1px solid var(--border);}
+.trust-item:last-child{border-right:none;}
+.trust-item svg{width:36px;height:36px;flex-shrink:0;}
+.trust-item b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;color:var(--cream);}
+.trust-item span{font-size:12px;color:var(--dim2);}
+
+/* ---------- COMPARE TABLE ---------- */
+.compare-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:6px;}
+.compare{width:100%;border-collapse:collapse;min-width:720px;font-size:13.5px;}
+.compare th,.compare td{padding:14px 20px;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle;}
+.compare thead th{background:var(--bg);font-family:var(--serif);font-weight:400;font-size:19px;color:var(--cream);padding:24px 20px;}
+.compare thead th small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:5px;}
+.compare thead th.feat{background:linear-gradient(180deg,rgba(201,162,75,0.16),var(--bg));}
+.compare tbody th{text-align:left;font-weight:400;color:var(--dim);background:var(--bg2);position:sticky;left:0;min-width:230px;}
+.compare tbody td{background:var(--bg2);color:var(--dim);}
+.compare td.feat{background:rgba(201,162,75,0.05);}
+.compare tr.grp th,.compare tr.grp td{background:var(--bg);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);padding:12px 20px;}
+.compare .yes{color:var(--gold-light);font-size:15px;}
+.compare .no{color:rgba(138,118,96,0.5);}
+.compare tfoot th,.compare tfoot td{background:var(--bg);border-bottom:none;padding:22px 20px;}
+.compare tfoot .cprice{font-family:var(--serif);font-size:26px;color:var(--gold-light);}
+.compare tfoot .cprice small{font-family:var(--sans);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim2);margin-right:6px;}
+.compare-note{text-align:center;margin-top:18px;font-size:12.5px;color:var(--dim2);}
+
+/* ---------- TRIP BUILDER ---------- */
+.builder{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:48px;max-width:960px;margin:0 auto;}
+.bld-row{margin-bottom:30px;}
+.bld-label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.bld-label i{font-style:normal;color:var(--dim2);letter-spacing:0.06em;text-transform:none;margin-left:8px;}
+.bld-opts{display:flex;gap:10px;flex-wrap:wrap;}
+.bld-opt{padding:11px 18px;border:1px solid var(--border);border-radius:30px;font-size:13px;cursor:pointer;background:transparent;color:var(--dim);transition:all .2s;font-family:var(--sans);}
+.bld-opt:hover{border-color:var(--gold);color:var(--cream);}
+.bld-opt:focus-visible{outline:1px solid var(--gold);outline-offset:2px;}
+.bld-opt[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#180d05;font-weight:600;}
+.bld-summary{margin-top:34px;padding-top:30px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;}
+.bld-summary p{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--gold-light);max-width:600px;margin:0;line-height:1.5;}
+.bld-summary p.empty{color:var(--dim2);}
+
+/* ---------- INTERNATIONAL TRAVELLERS ---------- */
+.intl-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:70px;align-items:start;}
+.intl-intro h2{font-size:clamp(30px,4vw,46px);margin:14px 0 20px;line-height:1.12;}
+.intl-intro p{color:var(--dim);font-size:15.5px;margin-bottom:16px;}
+.glance{margin-top:28px;border:1px solid var(--border);border-radius:6px;background:var(--bg2);}
+.glance div{display:flex;justify-content:space-between;gap:18px;padding:14px 22px;border-bottom:1px solid var(--border);font-size:13.5px;}
+.glance div:last-child{border-bottom:none;}
+.glance dt{color:var(--gold);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding-top:2px;}
+.glance dd{color:var(--dim);text-align:right;}
+.intl-acc details{border-bottom:1px solid var(--border);}
+.intl-acc details:first-child{border-top:1px solid var(--border);}
+.intl-acc summary{list-style:none;cursor:pointer;padding:22px 0;font-family:var(--serif);font-size:18px;color:var(--cream);display:flex;justify-content:space-between;align-items:center;gap:20px;}
+.intl-acc summary::-webkit-details-marker{display:none;}
+.intl-acc summary::after{content:'+';color:var(--gold);font-size:22px;transition:transform .25s;flex-shrink:0;}
+.intl-acc details[open] summary::after{transform:rotate(45deg);}
+.intl-acc summary:focus-visible{outline:1px solid var(--gold);outline-offset:4px;}
+.intl-acc details p{color:var(--dim);font-size:14.5px;padding-bottom:22px;max-width:640px;}
+.intl-acc details ul{list-style:none;padding-bottom:22px;max-width:640px;}
+.intl-acc details li{color:var(--dim);font-size:14.5px;padding:5px 0 5px 22px;position:relative;}
+.intl-acc details li::before{content:"—";color:var(--gold);position:absolute;left:0;}
+.intl-acc a{color:var(--gold-light);border-bottom:1px solid var(--gold);}
+
+/* ---------- NEW SECTIONS: RESPONSIVE ---------- */
+@media(max-width:1180px){
+  .nav-links{display:none;}
+  .burger{display:flex;}
+}
+@media(max-width:1000px){
+  .trust-grid{grid-template-columns:1fr 1fr;}
+  .trust-item:nth-child(2){border-right:none;}
+  .trust-item:nth-child(-n+2){border-bottom:1px solid var(--border);}
+}
+@media(max-width:900px){
+  .countdown-inner{gap:24px;}
+  .cd-label{text-align:center;}
+  .cd-note{text-align:center;max-width:420px;}
+  .whatis-grid{grid-template-columns:1fr;gap:44px;}
+  .dims-grid{grid-template-columns:1fr 1fr;margin-top:52px;}
+  .day-tabs{grid-template-columns:repeat(5,minmax(104px,1fr));overflow-x:auto;}
+  .day-panel{grid-template-columns:1fr;gap:28px;padding:34px 24px;}
+  .sd-wrap{grid-template-columns:1fr;gap:44px;}
+  .sd-intro{position:static;}
+  .zones-grid{grid-template-columns:1fr;border-radius:6px 6px 0 0;}
+  .zones-sat{grid-template-columns:1fr;}
+  .intl-grid{grid-template-columns:1fr;gap:44px;}
+  .builder{padding:32px 22px;}
+  .cta-bridge-in{justify-content:center;text-align:center;}
+}
+@media(max-width:560px){
+  .cd-unit{min-width:64px;}
+  .cd-num{font-size:28px;}
+  .dims-grid{grid-template-columns:1fr;}
+  .day-tab .dt-name{font-size:17px;}
+  .fact-row{flex-direction:column;gap:6px;padding:22px 24px;}
+  .fact-num{min-width:0;}
+  .trust-grid{grid-template-columns:1fr;}
+  .trust-item{border-right:none;border-bottom:1px solid var(--border);}
+  .trust-item:last-child{border-bottom:none;}
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
   .nav-links{display:none;}
@@ -409,6 +606,10 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
   .howit-grid{grid-template-columns:1fr;}
   .team-grid{grid-template-columns:1fr;}
   .ef-row{grid-template-columns:1fr;}
+  .cinema-content{padding:56px 28px;}
+  .cinema-content.split{grid-template-columns:1fr;gap:36px;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .journal-grid{grid-template-columns:repeat(2,1fr);gap:32px;}
   .enquiry-form{padding:28px 22px;}
   .footer-top{grid-template-columns:1fr;gap:36px;}
   section{padding:56px 0;}
@@ -425,6 +626,13 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 @media(max-width:560px){
   .values-grid{grid-template-columns:1fr;}
   .wrap{padding:0 20px;}
+  .cinema-content{padding:52px 18px;}
+  .gallery-grid,.journal-grid{grid-template-columns:1fr;}
+  .photo-grid-2{grid-template-columns:1fr;}
+  .photo-grid-2 .span2{grid-column:span 1;}
+}
+@media(hover:none){
+  .gallery-item .gi-cap{transform:translateY(0);}
 }
 </style>
 </head>
@@ -443,6 +651,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
     </a>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#five-days">Festival Guide</a>
       <a href="#experience">Experience</a>
       <a href="#pricing">Journeys</a>
       <a href="#diaspora">For Bengalis Abroad</a>
@@ -456,6 +665,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 <div class="mobile-menu" id="mmenu">
   <button type="button"onclick="document.getElementById('mmenu').classList.remove('open')" style="position:absolute;top:28px;right:28px;background:none;border:none;color:#f4ead9;font-size:28px;cursor:pointer;">&times;</button>
   <a href="#about" onclick="document.getElementById('mmenu').classList.remove('open')">About</a>
+  <a href="#five-days" onclick="document.getElementById('mmenu').classList.remove('open')">Festival Guide</a>
   <a href="#experience" onclick="document.getElementById('mmenu').classList.remove('open')">Experience</a>
   <a href="#pricing" onclick="document.getElementById('mmenu').classList.remove('open')">Journeys</a>
   <a href="#diaspora" onclick="document.getElementById('mmenu').classList.remove('open')">For Bengalis Abroad</a>
@@ -489,6 +699,20 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
   </div>
 </section>
 
+<!-- ============ COUNTDOWN (NEW) ============ -->
+<div class="countdown" id="countdown">
+  <div class="wrap countdown-inner">
+    <div class="cd-label" id="cdLabel">Durga Puja 2026 begins in<b id="cdSub">Shashthi &middot; Friday 16 October</b></div>
+    <div class="cd-clock" id="cdClock" role="timer" aria-label="Countdown to the start of Durga Puja 2026">
+      <div class="cd-unit"><span class="cd-num" id="cdD">--</span><span class="cd-cap">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdH">--</span><span class="cd-cap">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdM">--</span><span class="cd-cap">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdS">--</span><span class="cd-cap">Seconds</span></div>
+    </div>
+    <p class="cd-note">Spaces are limited to eight guests per cohort. <a href="#contact">Tell us your dates</a> and we will confirm what is still open.</p>
+  </div>
+</div>
+
 <!-- ============ WORD STRIP ============ -->
 <div class="word-strip">
   <div class="word-track" id="wordTrack">
@@ -520,6 +744,215 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
     <span class="fact"><b>1757</b>FIRST GRAND HOUSEHOLD PUJA</span>
     <span class="fact"><b>300 YRS</b>OF KUMARTULI'S CRAFT</span>
     <span class="fact"><b>5 DAYS</b>OF SACRED RITUAL</span>
+  </div>
+</div>
+
+<!-- ============ WHAT IS DURGA PUJA (NEW) ============ -->
+<section id="what-is">
+  <div class="wrap">
+    <div class="whatis-grid">
+      <div class="reveal">
+        <div class="eyebrow">For first-time visitors</div>
+        <h2>What Is <span class="accent">Durga Puja</span>?</h2>
+        <p>Durga Puja is an autumn festival honouring the goddess Durga's victory over the buffalo-demon Mahishasura: good over evil, and a celebration of the divine feminine. Bengalis have gathered for it for centuries.</p>
+        <p>In Kolkata it grew into something larger. Each neighbourhood committee raises a temporary pavilion, a <em>pandal</em>, and installs the goddess inside it. Some pandals are traditional shrines. Others are full-scale replicas of temples and monuments, or immersive installations built by professional theme-makers. More than 3,000 appear across Kolkata and its suburbs every year.</p>
+        <p>In December 2021 UNESCO inscribed Durga Puja in Kolkata on its list of the Intangible Cultural Heritage of Humanity, recognising how a whole city turns into a public art event.</p>
+      </div>
+      <div class="facts-panel reveal">
+        <div class="fact-row"><div class="fact-num">3,000+</div><div class="fact-txt"><b>Pandals</b>across Kolkata and its suburbs each year</div></div>
+        <div class="fact-row"><div class="fact-num">5</div><div class="fact-txt"><b>Days of worship</b>Shashthi to Vijaya Dashami, 16&ndash;21 October 2026</div></div>
+        <div class="fact-row"><div class="fact-num">2021</div><div class="fact-txt"><b>UNESCO inscription</b>Intangible Cultural Heritage of Humanity</div></div>
+      </div>
+    </div>
+
+    <div class="dims-grid reveal">
+      <div class="dim-card">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M10 50 V27 L30 10 L50 27 V50 Z"/><path d="M23 50 V38 a7 7 0 0 1 14 0 V50"/><path d="M30 10 V4 M30 4 L37 6.5 L30 9"/></svg>
+        <h4>Ephemeral architecture</h4>
+        <p>Pandals are designed like installations and built in a matter of weeks, then taken down once the festival ends.</p>
+      </div>
+      <div class="dim-card">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 36 H44 a14 13 0 0 1 -28 0Z"/><path d="M24 30 c-4-5 4-8 0-14 M32 30 c-4-5 4-8 0-14 M40 30 c-4-5 4-8 0-14"/><path d="M24 52 H36"/></svg>
+        <h4>Living ritual</h4>
+        <p>Priests, drummers and families keep the rites going for days, from the awakening of the goddess to the farewell at the river.</p>
+      </div>
+      <div class="dim-card">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30 H50 a20 17 0 0 1 -40 0Z"/><path d="M22 24 c0-6 7-6 7 0 M33 24 c0-6 7-6 7 0"/><path d="M22 52 H38"/></svg>
+        <h4>The pandal-trail table</h4>
+        <p>Phuchka, egg rolls, jhaal muri and Kolkata biryani. Eating is as much a part of the festival as the pandals themselves.</p>
+      </div>
+      <div class="dim-card">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="24" r="5"/><circle cx="30" cy="19" r="5"/><circle cx="41" cy="24" r="5"/><path d="M9 46 a10 10 0 0 1 20 0 M20 44 a10 10 0 0 1 20 0 M31 46 a10 10 0 0 1 20 0"/></svg>
+        <h4>A city out at night</h4>
+        <p>After dark the streets fill and families walk from pandal to pandal. The crowd is a big part of the atmosphere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE FIVE SACRED DAYS (NEW) ============ -->
+<section id="five-days" class="days-band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">2026 dates &middot; 16&ndash;21 October</div>
+      <h2>The Five <span class="accent">Sacred Days</span></h2>
+      <p>Five days, five moods. The festival builds from a quiet awakening at dusk to a farewell at the river. Choose a day to see what happens.</p>
+    </div>
+    <div class="pre-days reveal">
+      <span class="pre-chip"><b>Sat 10 Oct</b> &middot; Mahalaya, the goddess is called down</span>
+      <span class="pre-chip"><b>Fri 16 Oct</b> &middot; Shashthi begins with Bilva Nimantran</span>
+    </div>
+
+    <div class="reveal">
+      <div class="day-tabs" role="tablist" aria-label="The five days of Durga Puja 2026">
+        <button type="button" class="day-tab" role="tab" id="tab-d1" aria-controls="panel-d1" aria-selected="true"><span class="dt-roman">I</span><span class="dt-name">Shashthi</span><span class="dt-date">Sat 17 Oct</span></button>
+        <button type="button" class="day-tab" role="tab" id="tab-d2" aria-controls="panel-d2" aria-selected="false" tabindex="-1"><span class="dt-roman">II</span><span class="dt-name">Saptami</span><span class="dt-date">Sun 18 Oct</span></button>
+        <button type="button" class="day-tab" role="tab" id="tab-d3" aria-controls="panel-d3" aria-selected="false" tabindex="-1"><span class="dt-roman">III</span><span class="dt-name">Ashtami</span><span class="dt-date">Mon 19 Oct</span></button>
+        <button type="button" class="day-tab" role="tab" id="tab-d4" aria-controls="panel-d4" aria-selected="false" tabindex="-1"><span class="dt-roman">IV</span><span class="dt-name">Navami</span><span class="dt-date">Tue 20 Oct</span></button>
+        <button type="button" class="day-tab" role="tab" id="tab-d5" aria-controls="panel-d5" aria-selected="false" tabindex="-1"><span class="dt-roman">V</span><span class="dt-name">Dashami</span><span class="dt-date">Wed 21 Oct</span></button>
+      </div>
+
+      <div class="day-panel" role="tabpanel" id="panel-d1" aria-labelledby="tab-d1">
+        <div>
+          <div class="eyebrow">Day I of V</div>
+          <h3 class="dp-mood">The <span class="accent">Awakening</span></h3>
+          <p class="dp-lead">The festival opens. Before the goddess can be worshipped she has to be awakened. This is Akal Bodhon, the out-of-season invocation that Lord Rama is said to have made before his battle with Ravana. As evening falls the priests call her into the idol, and most pandals open to the public.</p>
+        </div>
+        <div>
+          <ul class="dp-list">
+            <li>Kalparambha and Akal Bodhon: the ritual invocation of the goddess into the idol</li>
+            <li>Amantran and Adhivas: the formal invitation and settling of the deity</li>
+            <li>Pandals light up and open, with lighter crowds than the nights that follow</li>
+          </ul>
+          <div class="dp-tip"><b>Best for settling in.</b> Walk one cluster in the early evening and see the festival before its peak nights.</div>
+        </div>
+      </div>
+
+      <div class="day-panel" role="tabpanel" id="panel-d2" aria-labelledby="tab-d2" hidden>
+        <div>
+          <div class="eyebrow">Day II of V</div>
+          <h3 class="dp-mood">The First <span class="accent">Full Day</span></h3>
+          <p class="dp-lead">The first full day of worship. At sunrise a banana plant dressed as a bride, the Nabapatrika, is bathed in the river and installed beside the idol. It stands for nine plant forms of the goddess. From here the daily Anjali offerings begin and the streets start to fill.</p>
+        </div>
+        <div>
+          <ul class="dp-list">
+            <li>Kola Bou: the ritual bathing of the Nabapatrika, at the river at dawn</li>
+            <li>Idols are fully installed and the pandals stay open through the day</li>
+            <li>A Sunday this year, so expect the city out in force by the afternoon</li>
+          </ul>
+          <div class="dp-tip"><b>Best for the morning.</b> Calm pandals, the best light for photography, and the river ritual at dawn.</div>
+        </div>
+      </div>
+
+      <div class="day-panel" role="tabpanel" id="panel-d3" aria-labelledby="tab-d3" hidden>
+        <div>
+          <span class="dp-peak">Peak day</span>
+          <div class="eyebrow">Day III of V</div>
+          <h3 class="dp-mood">The Sacred <span class="accent">Peak</span></h3>
+          <p class="dp-lead">The heart of the festival. Devotees offer flowers at the pandals in Pushpanjali, a young girl is worshipped as the living goddess in Kumari Puja, and at the meeting of Ashtami and Navami comes Sandhi Puja: 48 minutes of 108 lamps, 108 lotus flowers and unbroken drumming.</p>
+        </div>
+        <div>
+          <ul class="dp-list">
+            <li>Pushpanjali: communal flower offerings to the goddess</li>
+            <li>Kumari Puja: a girl worshipped as the goddess herself</li>
+            <li>Sandhi Puja: the hour is set by the panchang, so we confirm it a few days ahead</li>
+            <li>The night crowds are among the largest of the festival</li>
+          </ul>
+          <div class="dp-tip"><b>Choose your intensity.</b> Sandhi Puja for the most charged moment of the festival, or the morning for a calmer view.</div>
+        </div>
+      </div>
+
+      <div class="day-panel" role="tabpanel" id="panel-d4" aria-labelledby="tab-d4" hidden>
+        <div>
+          <div class="eyebrow">Day IV of V</div>
+          <h3 class="dp-mood">Drums and <span class="accent">Smoke</span></h3>
+          <p class="dp-lead">The last day of worship. Maha Aarti in the evening, and the dhunuchi naach: dancers carry burning clay pots of coconut husk and incense, moving to the beat of the dhak until the pandal fills with smoke.</p>
+        </div>
+        <div>
+          <ul class="dp-list">
+            <li>Navami Homa, the fire ritual, and Maha Aarti</li>
+            <li>Dhunuchi naach at the larger pandals, best seen in the evening</li>
+            <li>The last big night before the farewell</li>
+          </ul>
+          <div class="dp-tip"><b>Learn the steps first.</b> Our Immersion and Connoisseur journeys include a private dhunuchi lesson, so you know what you are watching.</div>
+        </div>
+      </div>
+
+      <div class="day-panel" role="tabpanel" id="panel-d5" aria-labelledby="tab-d5" hidden>
+        <div>
+          <div class="eyebrow">Day V of V</div>
+          <h3 class="dp-mood">The <span class="accent">Farewell</span></h3>
+          <p class="dp-lead">Vijaya Dashami. Married women apply vermilion to the goddess and to one another in Sindur Khela, sweets are shared, and then the idols are carried in procession to the Hooghly. Made of river clay, she goes back to the river.</p>
+        </div>
+        <div>
+          <ul class="dp-list">
+            <li>Sindur Khela: vermilion, sweets and laughter at the pandals</li>
+            <li>Visarjan: processions to the ghats along the Hooghly</li>
+            <li>Bijoya greetings follow, with visits to elders and shared sweets in the days after</li>
+          </ul>
+          <div class="dp-tip"><b>Included in every journey.</b> Watching the immersion from a private ghat is part of all three of our journeys.</div>
+        </div>
+      </div>
+    </div>
+    <p class="days-src">Dates follow the Kolkata panchang as published by Drik Panchang. Ritual hours can shift by a few hours, and we confirm them with committees closer to each day.</p>
+  </div>
+</section>
+
+<!-- ============ A DAY AT THE PUJA (NEW) ============ -->
+<section id="sample-day">
+  <div class="wrap">
+    <div class="sd-wrap">
+      <div class="sd-intro reveal">
+        <div class="eyebrow">Day by day</div>
+        <h2>What a Puja Day <span class="accent">Actually Looks Like</span></h2>
+        <p>Durga Puja is not a list of tickets to collect. It has a rhythm: calm mornings, a long rest, then a city that stays awake. This is a sample Saptami, Sunday 18 October, shaped around that rhythm.</p>
+        <p class="sd-note">A sample, not a fixed itinerary. We adjust for crowds, road closures, weather and the panchang.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-time">Dawn</div>
+          <h4>Kola Bou at the river</h4>
+          <p>We meet before sunrise at a ghat on the Hooghly for the ritual bathing of the Nabapatrika. The air is cool, the crowds are thin, and the light is the kind photographers wait all year for.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Mid-morning</div>
+          <h4>The calm hours in North Kolkata</h4>
+          <p>Pandals are quiet and you can actually study the craftsmanship. We walk the old-city cluster around Bagbazar and Kumartuli while the streets still belong to walkers.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Lunch</div>
+          <h4>A proper Bengali thali</h4>
+          <p>Out of the heat, seated, and fed well. The night circuit runs on street food, so this is the one full sit-down meal of the day.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Afternoon</div>
+          <h4>Rest, on purpose</h4>
+          <p>Back to the hotel through the warmest hours. From around seven the crowds surge, and you will want the energy.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Early evening</div>
+          <h4>South Kolkata as the lights come on</h4>
+          <p>One cluster per evening, never the whole city in a night. We work the Kalighat and Deshapriya Park circuit, by car where the roads are open and on foot where they are not.</p>
+        </div>
+        <div class="tl-item hot">
+          <div class="tl-time">Night</div>
+          <h4>Street food and the surge</h4>
+          <p>Phuchka, egg rolls and jhaal muri between pandals, in the crowd that makes Kolkata's Puja what it is. Big pandals often send men and women in through separate queues, so we agree a meeting point before every entry.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Late</div>
+          <h4>Home by ten, or not at all</h4>
+          <p>Families and older guests head back around ten. If you want the all-night version, we stay out with you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bridge">
+  <div class="wrap cta-bridge-in">
+    <p>Not sure which days suit you? <em>Tell us your dates</em> and we will build around them.</p>
+    <a href="#builder" class="btn btn-gold">Sketch Your Trip</a>
   </div>
 </div>
 
@@ -795,6 +1228,81 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
   </div>
 </section>
 
+<!-- ============ PANDAL CIRCUITS (NEW) ============ -->
+<section id="pandal-circuits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Route-building 101</div>
+      <h2>Where the <span class="accent">Pandals</span> Are</h2>
+      <p>Kolkata's Puja falls into clusters. We give each cluster its own block of time, so you see the best of a district without zig-zagging across the city.</p>
+    </div>
+
+    <div class="reveal">
+      <div class="zones-grid">
+        <div class="zone">
+          <div class="zone-tag">Circuit one</div>
+          <h3>North Kolkata</h3>
+          <div class="zone-sub">Heritage and tradition</div>
+          <ul>
+            <li><b>Bagbazar Sarbojanin</b><span>Regarded as Kolkata's first true community puja (1910). Deliberately traditional, and close to the river.</span></li>
+            <li><b>Kumartuli Park</b><span>Beside the idol-makers' quarter, with classical themes and music.</span></li>
+            <li><b>College Square</b><span>Running since 1948 beside a lake, known for lighting that reflects in the water.</span></li>
+            <li><b>Sreebhumi Sporting Club</b><span>Lake Town's headline-grabber, known for life-size temple and monument replicas.</span></li>
+          </ul>
+          <div class="zone-route"><b>Typical metro spine:</b> Sovabazar-Sutanuti, Shyambazar, Belgachia</div>
+        </div>
+        <div class="zone">
+          <div class="zone-tag">Circuit two</div>
+          <h3>Central Kolkata</h3>
+          <div class="zone-sub">The bridge between the clusters</div>
+          <ul>
+            <li><b>Santosh Mitra Square</b><span>Since 1936, one of the city's most historic and consistently elaborate committees.</span></li>
+            <li><b>Mohammad Ali Park</b><span>Since 1969, famous for grand replicas of monuments from around the world.</span></li>
+          </ul>
+          <div class="zone-route"><b>Good to know:</b> a convenient stopover between the North and South circuits</div>
+        </div>
+        <div class="zone">
+          <div class="zone-tag">Circuit three</div>
+          <h3>South Kolkata</h3>
+          <div class="zone-sub">Themes and glamour</div>
+          <ul>
+            <li><b>Ekdalia Evergreen</b><span>Recreates a major Indian temple each year, with very tall idols.</span></li>
+            <li><b>Deshapriya Park</b><span>Home of the 88-foot idol of 2015, reported as the world's tallest Durga.</span></li>
+            <li><b>The theme circuit</b><span>Suruchi Sangha, Singhi Park, Hindustan Park and Mudiali Club sit on the same glamour route.</span></li>
+          </ul>
+          <div class="zone-route"><b>Typical metro belt:</b> Kalighat to Deshapriya Park</div>
+        </div>
+      </div>
+      <div class="zones-sat">
+        <div class="zone">
+          <div class="zone-tag">Own outing</div>
+          <h3>Salt Lake &amp; New Town</h3>
+          <div class="zone-sub">Newer and increasingly competitive</div>
+          <ul>
+            <li><b>Around 44 registered pandals in Salt Lake alone</b><span>FD Block is known for ambitious decoration, and New Town Sarbojanin leans into contemporary architecture and lighting.</span></li>
+          </ul>
+        </div>
+        <div class="zone">
+          <div class="zone-tag">Own outing</div>
+          <h3>Behala</h3>
+          <div class="zone-sub">South-west Kolkata</div>
+          <ul>
+            <li><b>Behala Friends and Behala Nutan Dal</b><span>Large-scale traditional idols at the first, innovative theming at the second.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="pandal-foot reveal">Themes change every year and some committees announce late. We confirm the 2026 line-up as it is published and build your route around what is actually standing.</p>
+  </div>
+</section>
+
+<div class="cta-bridge">
+  <div class="wrap cta-bridge-in">
+    <p>Want a route built for <em>your</em> Puja? Sketch it in two minutes.</p>
+    <a href="#builder" class="btn btn-gold">Design Your Trip</a>
+  </div>
+</div>
+
 <!-- ============ FOUNDER NOTE (replaces fabricated testimonial) ============ -->
 <div class="founder-note reveal">
   <div class="wrap">
@@ -847,6 +1355,30 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
   </div>
 </section>
 
+<!-- ============ TRUST BAR (NEW) ============ -->
+<div class="trust-bar">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><circle cx="30" cy="30" r="23"/><path d="M30 14 L34.5 25.5 L47 26 L37.3 33.6 L40.6 45.5 L30 38.8 L19.4 45.5 L22.7 33.6 L13 26 L25.5 25.5Z"/></svg>
+        <div><b>UNESCO-recognised festival</b><span>Intangible Cultural Heritage, 2021</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><rect x="13" y="27" width="34" height="24" rx="2"/><path d="M21 27 V20 a9 9 0 0 1 18 0 V27"/><circle cx="30" cy="38" r="3"/><path d="M30 41 V45"/></svg>
+        <div><b>Eight guests, no more</b><span>Private cohorts, never a bus tour</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M9 31 L30 12 L51 31"/><path d="M15 27 V49 H45 V27"/><path d="M25 49 V36 H35 V49"/></svg>
+        <div><b>Kolkata-born hosts</b><span>We grew up inside this festival</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M10 31 L31 10 H50 V29 L29 50 Z"/><circle cx="40" cy="20" r="3.2"/></svg>
+        <div><b>Priced honestly</b><span>Transparent from the first quote</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ============ PRICING ============ -->
 <section id="pricing">
   <div class="wrap">
@@ -866,7 +1398,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <div class="tier" data-tier="value">
         <div class="tier-name">The Essence</div>
         <h3>5 Days</h3>
-        <div class="dates">4 Nights · Saptami to Vijaya Dashami · 17–21 Oct</div>
+        <div class="dates">4 Nights · Shashthi to Vijaya Dashami · 17–21 Oct</div>
         <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="2800">2,800</span></div>
         <div class="price-note">per person · double occupancy</div>
         <ul>
@@ -925,6 +1457,121 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 
     <div class="entry-note reveal">
       Only have an evening, or extending a longer India trip? <a href="#contact">Ask about our Evening at the Pandals experience</a> — a private half-day taste of the festival, from $295 per person.
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARE THE JOURNEYS (NEW) ============ -->
+<section id="compare" style="background:var(--bg2);border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Side by side</div>
+      <h2>What Each Journey <span class="accent">Includes</span></h2>
+      <p>Every journey shares the same foundation. The longer ones add days, depth and access.</p>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">The Essence<small>4 nights</small></th>
+            <th scope="col" class="feat">The Immersion<small>7 nights &middot; most chosen</small></th>
+            <th scope="col">The Connoisseur<small>11 nights</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="grp"><th scope="row">The festival</th><td></td><td class="feat"></td><td></td></tr>
+          <tr><th scope="row">Days covered</th><td>Shashthi to Dashami</td><td class="feat">Chaturthi to Dashami</td><td>Mahalaya to Dashami</td></tr>
+          <tr><th scope="row">Expert-guided pandal circuit</th><td class="yes">&#10003;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Private Kumartuli artisan studio visit</th><td class="yes">&#10003;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Sindur Khela on Dashami</th><td class="yes">&#10003;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Bisarjan from a private ghat</th><td class="yes">&#10003;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Early, low-crowd pandal hopping from Chaturthi</th><td class="no">&mdash;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Shashthi Bodhon witnessed live</th><td class="no">&mdash;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Exclusive after-dark pandal access</th><td class="no">&mdash;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Pre-dawn Mahalaya ceremony on the Ganges</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Zamindar family puja access</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          <tr class="grp"><th scope="row">Experiences</th><td></td><td class="feat"></td><td></td></tr>
+          <tr><th scope="row">Private dhunuchi naach lesson</th><td class="no">&mdash;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Bengali home kitchen experience</th><td class="no">&mdash;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Street food walk with a celebrated food writer</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Photography masterclass</th><td>Add-on</td><td class="feat">Add-on</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Commission a Kumartuli idol in your name</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Darjeeling excursion by private car</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
+          <tr class="grp"><th scope="row">Comfort</th><td></td><td class="feat"></td><td></td></tr>
+          <tr><th scope="row">Where you stay</th><td>Heritage boutique hotel</td><td class="feat">Heritage boutique hotel</td><td>Private heritage haveli</td></tr>
+          <tr><th scope="row">Meals</th><td>Breakfasts and 3 dinners</td><td class="feat">All meals</td><td>All meals</td></tr>
+          <tr><th scope="row">Private transfers</th><td class="yes">&#10003;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><th scope="row">Personal support</th><td>Expert guide</td><td class="feat">Cultural concierge</td><td>Personal assistant</td></tr>
+          <tr><th scope="row">Handwoven Dhaniakhali silk sari gift</th><td class="no">&mdash;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">From, per person</th>
+            <td><div class="cprice"><small>from</small><span class="curr-sym">$</span><span class="curr-amt" data-usd="2800">2,800</span></div></td>
+            <td class="feat"><div class="cprice"><small>from</small><span class="curr-sym">$</span><span class="curr-amt" data-usd="4900">4,900</span></div></td>
+            <td><div class="cprice"><small>from</small><span class="curr-sym">$</span><span class="curr-amt" data-usd="8500">8,500</span></div></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="compare-note reveal">Prices are per person, double occupancy, and follow the currency you chose above. <a href="#contact" style="color:var(--gold-light);border-bottom:1px solid var(--gold);">Ask us anything before you decide.</a></p>
+  </div>
+</section>
+
+<!-- ============ DESIGN YOUR OWN (NEW) ============ -->
+<section id="builder">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Build your own</div>
+      <h2>Design Your <span class="accent">Perfect Puja</span></h2>
+      <p>Sketch the shape of your trip. Nothing here is binding and nothing sends by itself. When you are happy, one button carries your sketch into the enquiry form for us to cost and refine.</p>
+    </div>
+    <div class="builder reveal" id="builderCard">
+      <div class="bld-row">
+        <div class="bld-label">How long?</div>
+        <div class="bld-opts" data-key="nights">
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="an evening at the pandals">Just an evening</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="4-night">4 nights</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="7-night">7 nights</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="11-night">11 nights</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="longer">Longer, advise me</button>
+        </div>
+      </div>
+      <div class="bld-row">
+        <div class="bld-label">Where would you like to stay?</div>
+        <div class="bld-opts" data-key="stay">
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a heritage boutique hotel">Heritage boutique hotel</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a private heritage haveli">Private heritage haveli</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="whichever stay you recommend">Advise me</button>
+        </div>
+      </div>
+      <div class="bld-row">
+        <div class="bld-label">Who is travelling?</div>
+        <div class="bld-opts" data-key="who">
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a solo traveller" data-guests="1 Guest">Solo</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a couple" data-guests="2 Guests">A couple</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a family">A family</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a small group" data-guests="5+ Guests">A small group, up to 8</button>
+        </div>
+      </div>
+      <div class="bld-row">
+        <div class="bld-label">What matters most?<i>choose any</i></div>
+        <div class="bld-opts" data-key="focus" data-multi="1">
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="pandal art and theme installations">Pandal art</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="ritual and ceremony">Ritual and ceremony</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="Kumartuli and idol-making">Kumartuli and idol-making</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="the street-food trail">Food trail</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="bonedi bari heritage">Bonedi bari heritage</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="photography">Photography</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="Bengal beyond Kolkata">Bengal beyond Kolkata</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="coming home for Pujo">Coming home for Pujo</button>
+        </div>
+      </div>
+      <div class="bld-summary">
+        <p id="bldText" class="empty">Choose a few options above and your sketch will appear here.</p>
+        <button type="button" class="btn btn-gold" id="bldSend">Send This to Our Team</button>
+      </div>
     </div>
   </div>
 </section>
@@ -1021,6 +1668,55 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
         <svg viewBox="0 0 44 44" fill="none" stroke="#c9a24b" stroke-width="1.3"><rect x="6" y="18" width="24" height="12" rx="2"/><circle cx="13" cy="32" r="3"/><circle cx="29" cy="32" r="3"/><path d="M30 20 L38 20 L38 27 L30 27"/></svg>
         <h4>Seamless Logistics</h4>
         <p>Private transfers, expert guides, and a concierge who handles every detail from arrival to departure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR INTERNATIONAL TRAVELLERS (NEW) ============ -->
+<section id="international" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="intl-grid">
+      <div class="intl-intro reveal">
+        <div class="eyebrow">For international travellers</div>
+        <h2>Coming From <span class="accent">Abroad</span>?</h2>
+        <p>The practical questions, answered plainly. If something you need is not here, ask us and we will add it.</p>
+        <dl class="glance">
+          <div><dt>Airport</dt><dd>Kolkata (CCU)</dd></div>
+          <div><dt>Time zone</dt><dd>IST, UTC+5:30</dd></div>
+          <div><dt>Currency</dt><dd>Indian rupee (&#8377;)</dd></div>
+          <div><dt>Power</dt><dd>230V, plug types C, D and M</dd></div>
+        </dl>
+      </div>
+      <div class="intl-acc reveal">
+        <details open>
+          <summary>Visa</summary>
+          <p>Most visitors need an India e-Visa, applied for online on the Indian government's official portal (<a href="https://indianvisaonline.gov.in/evisa/" target="_blank" rel="noopener">indianvisaonline.gov.in</a>). Fees and validity depend on your nationality and the visa type, and your passport should be valid for at least six months on arrival. With the festival close, apply as soon as your dates are firm rather than in the last week. We are happy to walk you through it.</p>
+        </details>
+        <details>
+          <summary>Flights and arrival</summary>
+          <p>Kolkata's airport is Netaji Subhas Chandra Bose International (CCU). Most travellers from North America and Europe connect through a Gulf, Southeast Asian or Indian hub, so allow for a long travel day. Private transfers are included in every journey.</p>
+        </details>
+        <details>
+          <summary>When to arrive</summary>
+          <p>The Essence begins on 17 October, The Immersion on 14 October and The Connoisseur on 10 October. Whichever you choose, we recommend landing a day early to recover from jet lag, because Shashthi evening is not the moment to be exhausted. Ask us about adding the extra night.</p>
+        </details>
+        <details>
+          <summary>What to wear and pack</summary>
+          <ul>
+            <li>Mid-October is warm and humid, roughly 24 to 32&deg;C, with a chance of light rain as the monsoon fades.</li>
+            <li>Comfortable, stable footwear matters most. Expect kilometres of walking on uneven ground.</li>
+            <li>Breathable cotton by day and a light layer for early mornings. Skip heavy embroidery and velvet.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Crowds, safety and comfort</summary>
+          <p>Mornings and early afternoons are calm, and from about seven in the evening the crowds surge, peaking on Saptami, Ashtami and Navami nights. We pace every day around that rhythm. Kolkata Police increase their presence during the festival and run women's help desks (the emergency number is 100, and the women's helpline is 1091). We agree a meeting point before entering any large pandal.</p>
+        </details>
+        <details>
+          <summary>Accessibility, families and older guests</summary>
+          <p>A published accessibility protocol covers 24 prominent pandals, addressing ramps, accessible toilets and signage, and some pandals have first-aid points with wheelchairs. Tell us about mobility needs or young children and we will weight the itinerary towards daytime and the more accessible pandals.</p>
+        </details>
       </div>
     </div>
   </div>
@@ -1127,7 +1823,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <div class="ef-field">
         <label for="efPhone">Phone Number</label>
         <div style="display:flex;gap:8px;max-width:400px;">
-          <select id="efPhoneCode" title="Country code" style="flex:0 0 108px;">
+          <select id="efPhoneCode" title="Country code" style="flex:0 0 108px;"><option value="">Code</option>
               <option>AF +93</option><option>AX +358</option><option>AL +355</option><option>DZ +213</option><option>AS +1684</option><option>AD +376</option><option>AO +244</option><option>AI +1264</option><option>AQ +672</option><option>AG +1268</option><option>AR +54</option><option>AM +374</option><option>AW +297</option><option>AU +61</option><option>AT +43</option><option>AZ +994</option><option>BS +1242</option><option>BH +973</option><option>BD +880</option><option>BB +1246</option><option>BY +375</option><option>BE +32</option><option>BZ +501</option><option>BJ +229</option><option>BM +1441</option><option>BT +975</option><option>BO +591</option><option>BA +387</option><option>BW +267</option><option>BR +55</option><option>IO +246</option><option>BN +673</option><option>BG +359</option><option>BF +226</option><option>BI +257</option><option>KH +855</option><option>CM +237</option><option>US +1</option><option>CA +1</option><option>CV +238</option><option>KY + 345</option><option>CF +236</option><option>TD +235</option><option>CL +56</option><option>CN +86</option><option>CX +61</option><option>CC +61</option><option>CO +57</option><option>KM +269</option><option>CG +242</option><option>CD +243</option><option>CK +682</option><option>CR +506</option><option>CI +225</option><option>HR +385</option><option>CU +53</option><option>CY +357</option><option>CZ +420</option><option>DK +45</option><option>DJ +253</option><option>DM +1767</option><option>DO +1849</option><option>EC +593</option><option>EG +20</option><option>SV +503</option><option>GQ +240</option><option>ER +291</option><option>EE +372</option><option>ET +251</option><option>FK +500</option><option>FO +298</option><option>FJ +679</option><option>FI +358</option><option>FR +33</option><option>GF +594</option><option>PF +689</option><option>GA +241</option><option>GM +220</option><option>GE +995</option><option>DE +49</option><option>GH +233</option><option>GI +350</option><option>GR +30</option><option>GL +299</option><option>GD +1473</option><option>GP +590</option><option>GU +1671</option><option>GT +502</option><option>GG +44</option><option>GN +224</option><option>GW +245</option><option>GY +595</option><option>HT +509</option><option>VA +379</option><option>HN +504</option><option>HK +852</option><option>HU +36</option><option>IS +354</option><option>IN +91</option><option>ID +62</option><option>IR +98</option><option>IQ +964</option><option>IE +353</option><option>IM +44</option><option>IL +972</option><option>IT +39</option><option>JM +1876</option><option>JP +81</option><option>JE +44</option><option>JO +962</option><option>KZ +77</option><option>KE +254</option><option>KI +686</option><option>KP +850</option><option>KR +82</option><option>KW +965</option><option>KG +996</option><option>LA +856</option><option>LV +371</option><option>LB +961</option><option>LS +266</option><option>LR +231</option><option>LY +218</option><option>LI +423</option><option>LT +370</option><option>LU +352</option><option>MO +853</option><option>MK +389</option><option>MG +261</option><option>MW +265</option><option>MY +60</option><option>MV +960</option><option>ML +223</option><option>MT +356</option><option>MH +692</option><option>MQ +596</option><option>MR +222</option><option>MU +230</option><option>YT +262</option><option>MX +52</option><option>FM +691</option><option>MD +373</option><option>MC +377</option><option>MN +976</option><option>ME +382</option><option>MS +1664</option><option>MA +212</option><option>MZ +258</option><option>MM +95</option><option>NA +264</option><option>NR +674</option><option>NP +977</option><option>NL +31</option><option>AN +599</option><option>NC +687</option><option>NZ +64</option><option>NI +505</option><option>NE +227</option><option>NG +234</option><option>NU +683</option><option>NF +672</option><option>MP +1670</option><option>NO +47</option><option>OM +968</option><option>PK +92</option><option>PW +680</option><option>PS +970</option><option>PA +507</option><option>PG +675</option><option>PY +595</option><option>PE +51</option><option>PH +63</option><option>PN +872</option><option>PL +48</option><option>PT +351</option><option>PR +1939</option><option>QA +974</option><option>RO +40</option><option>RU +7</option><option>RW +250</option><option>RE +262</option><option>BL +590</option><option>SH +290</option><option>KN +1869</option><option>LC +1758</option><option>MF +590</option><option>PM +508</option><option>VC +1784</option><option>WS +685</option><option>SM +378</option><option>ST +239</option><option>SA +966</option><option>SN +221</option><option>RS +381</option><option>SC +248</option><option>SL +232</option><option>SG +65</option><option>SK +421</option><option>SI +386</option><option>SB +677</option><option>SO +252</option><option>ZA +27</option><option>SS +211</option><option>GS +500</option><option>ES +34</option><option>LK +94</option><option>SD +249</option><option>SR +597</option><option>SJ +47</option><option>SZ +268</option><option>SE +46</option><option>CH +41</option><option>SY +963</option><option>TW +886</option><option>TJ +992</option><option>TZ +255</option><option>TH +66</option><option>TL +670</option><option>TG +228</option><option>TK +690</option><option>TO +676</option><option>TT +1868</option><option>TN +216</option><option>TR +90</option><option>TM +993</option><option>TC +1649</option><option>TV +688</option><option>UG +256</option><option>UA +380</option><option>AE +971</option><option>GB +44</option><option>UY +598</option><option>UZ +998</option><option>VU +678</option><option>VE +58</option><option>VN +84</option><option>VG +1284</option><option>VI +1340</option><option>WF +681</option><option>YE +967</option><option>ZM +260</option><option>ZW +263</option>
           </select>
           <input type="tel" id="efPhone" style="flex:1;" placeholder="Number">
@@ -1231,6 +1927,10 @@ const io = new IntersectionObserver((entries)=>{
 revealEls.forEach(el=>io.observe(el));
 
 // Enquiry form -> pre-filled email (no backend required)
+document.getElementById('efCountry').addEventListener('change', function () {
+  document.getElementById('efPhoneCode').selectedIndex = this.selectedIndex;
+});
+
 function sendEnquiry(e) {
   e.preventDefault();
   const firstName = document.getElementById('efFirstName').value.trim();
@@ -1240,7 +1940,7 @@ function sendEnquiry(e) {
   const country = document.getElementById('efCountry').value.trim();
   const phoneCode = document.getElementById('efPhoneCode').value.trim();
   const phoneNum = document.getElementById('efPhone').value.trim();
-  const phone = phoneNum ? (phoneCode.split(' ')[1] || '') + ' ' + phoneNum : '';
+  const phone = phoneNum ? ((phoneCode.split(' ')[1] || '') + ' ' + phoneNum).trim() : '';
   const journey = document.getElementById('efJourney').value;
   const guests = document.getElementById('efGuests').value;
   const message = document.getElementById('efMessage').value.trim();
@@ -1313,6 +2013,131 @@ function updateQuizResult(){
   document.getElementById('quizResult').innerHTML = msg + ' <br><a href="#pricing" class="btn btn-gold" style="margin-top:16px;">See This Journey</a>';
   document.querySelector(`.tier[data-tier="${tier}"]`).style.outline = '2px solid #c9a24b';
 }
+
+// Countdown to Shashthi (Friday 16 October 2026, IST)
+(function () {
+  const start = new Date('2026-10-16T00:00:00+05:30').getTime();
+  const end = new Date('2026-10-22T00:00:00+05:30').getTime();
+  const box = document.getElementById('countdown');
+  if (!box) return;
+  const clock = document.getElementById('cdClock');
+  const label = document.getElementById('cdLabel');
+  const els = { d: document.getElementById('cdD'), h: document.getElementById('cdH'), m: document.getElementById('cdM'), s: document.getElementById('cdS') };
+  const pad = n => String(n).padStart(2, '0');
+  let timer;
+  function tick() {
+    const now = Date.now();
+    if (now >= end) { box.style.display = 'none'; clearInterval(timer); return; }
+    if (now >= start) {
+      clock.style.display = 'none';
+      label.innerHTML = 'Durga Puja 2026 is under way<b>Shashthi to Vijaya Dashami &middot; 16&ndash;21 October</b>';
+      clearInterval(timer);
+      return;
+    }
+    const diff = start - now;
+    els.d.textContent = pad(Math.floor(diff / 86400000));
+    els.h.textContent = pad(Math.floor(diff / 3600000) % 24);
+    els.m.textContent = pad(Math.floor(diff / 60000) % 60);
+    els.s.textContent = pad(Math.floor(diff / 1000) % 60);
+  }
+  tick();
+  timer = setInterval(tick, 1000);
+})();
+
+// Five Sacred Days tabs
+(function () {
+  const tabs = Array.from(document.querySelectorAll('.day-tab'));
+  const panels = Array.from(document.querySelectorAll('.day-panel'));
+  if (!tabs.length) return;
+  function select(i, focus) {
+    tabs.forEach((t, j) => {
+      const on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      panels[j].hidden = !on;
+    });
+    const strip = tabs[i].parentElement;
+    if (strip.scrollWidth > strip.clientWidth) {
+      strip.scrollTo({ left: tabs[i].offsetLeft - (strip.clientWidth - tabs[i].offsetWidth) / 2, behavior: 'smooth' });
+    }
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(i, false));
+    t.addEventListener('keydown', e => {
+      const last = tabs.length - 1;
+      if (e.key === 'ArrowRight') { e.preventDefault(); select(i === last ? 0 : i + 1, true); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); select(i === 0 ? last : i - 1, true); }
+      else if (e.key === 'Home') { e.preventDefault(); select(0, true); }
+      else if (e.key === 'End') { e.preventDefault(); select(last, true); }
+    });
+  });
+})();
+
+// Design Your Perfect Puja -> pre-fills the enquiry form
+(function () {
+  const card = document.getElementById('builderCard');
+  if (!card) return;
+  const state = { nights: null, stay: null, who: null, focus: [] };
+  const text = document.getElementById('bldText');
+  const groups = card.querySelectorAll('.bld-opts');
+
+  function join(list) {
+    if (list.length < 2) return list.join('');
+    return list.slice(0, -1).join(', ') + ' and ' + list[list.length - 1];
+  }
+  function summary() {
+    const parts = [];
+    if (state.nights === 'an evening at the pandals') parts.push('An evening at the pandals');
+    else if (state.nights === 'longer') parts.push('A longer journey');
+    else if (state.nights) parts.push((state.nights === '11-night' ? 'An ' : 'A ') + state.nights + ' journey');
+    else parts.push('A Durga Puja journey');
+    if (state.stay) parts.push('staying in ' + state.stay);
+    if (state.who) parts.push('for ' + state.who);
+    let s = parts.join(', ') + '.';
+    if (state.focus.length) s += ' Most interested in ' + join(state.focus) + '.';
+    return s;
+  }
+  function refresh() {
+    const any = state.nights || state.stay || state.who || state.focus.length;
+    text.textContent = any ? summary() : 'Choose a few options above and your sketch will appear here.';
+    text.classList.toggle('empty', !any);
+  }
+  groups.forEach(group => {
+    const key = group.dataset.key;
+    const multi = group.dataset.multi === '1';
+    group.querySelectorAll('.bld-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const wasOn = btn.getAttribute('aria-pressed') === 'true';
+        if (multi) {
+          btn.setAttribute('aria-pressed', wasOn ? 'false' : 'true');
+          state.focus = Array.from(group.querySelectorAll('.bld-opt[aria-pressed="true"]')).map(b => b.dataset.val);
+        } else {
+          group.querySelectorAll('.bld-opt').forEach(b => b.setAttribute('aria-pressed', 'false'));
+          btn.setAttribute('aria-pressed', wasOn ? 'false' : 'true');
+          state[key] = wasOn ? null : btn.dataset.val;
+        }
+        refresh();
+      });
+    });
+  });
+
+  document.getElementById('bldSend').addEventListener('click', () => {
+    const any = state.nights || state.stay || state.who || state.focus.length;
+    const journey = document.getElementById('efJourney');
+    const guests = document.getElementById('efGuests');
+    const msg = document.getElementById('efMessage');
+    if (any) {
+      journey.value = state.nights === 'an evening at the pandals' ? 'Evening at the Pandals — from $295' : 'Custom / Group Enquiry';
+      const chosen = card.querySelector('[data-key="who"] .bld-opt[aria-pressed="true"]');
+      if (chosen && chosen.dataset.guests) guests.value = chosen.dataset.guests;
+      const rest = msg.value.replace(/^Trip sketch:.*\n?/, '');
+      msg.value = 'Trip sketch: ' + summary() + (rest ? '\n' + rest : '');
+    }
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => document.getElementById('efFirstName').focus({ preventScroll: true }), 700);
+  });
+})();
 </script>
 </body>
 </html>
