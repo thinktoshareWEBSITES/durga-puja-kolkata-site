@@ -93,27 +93,27 @@ header{
   min-height:100vh;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   text-align:center;
-  padding:140px 24px 80px;
+  padding:100px 24px 34px;
   overflow:hidden;
 }
-.hero-photo{position:absolute;inset:0;background-image:url('images/puja_dhunuchi_dance.jpg');background-size:cover;background-position:center top;filter:brightness(0.55) saturate(0.9);}
+.hero-photo{position:absolute;inset:0;background-image:url('images/puja_dhunuchi_dance.jpg');background-size:cover;background-position:center top;filter:brightness(0.72) saturate(0.95);}
 .hero-photo::after{content:'';position:absolute;inset:0;background:
     radial-gradient(ellipse 70% 55% at 50% 0%, rgba(201,162,75,0.10), transparent 60%),
-    linear-gradient(180deg,rgba(11,6,5,0.45) 0%,rgba(11,6,5,0.55) 30%,rgba(11,6,5,0.97) 68%,#0b0605 100%);}
+    linear-gradient(180deg,rgba(11,6,5,0.35) 0%,rgba(11,6,5,0.5) 34%,rgba(11,6,5,0.9) 78%,#0b0605 100%);}
 .hero-pattern{position:absolute;inset:0;opacity:0.35;pointer-events:none;}
 .hero-pattern svg{width:100%;height:100%;}
 .hero-content{position:relative;z-index:2;max-width:900px;}
 .hero-badge{
   display:inline-flex;align-items:center;gap:10px;
-  border:1px solid var(--border);border-radius:30px;padding:8px 20px;margin-bottom:28px;
+  border:1px solid var(--border);border-radius:30px;padding:8px 20px;margin-bottom:22px;
   font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);
 }
-.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.08;margin-bottom:26px;}
-.hero p.sub{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,20px);color:var(--dim);max-width:620px;margin:0 auto 40px;}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
+.hero h1{font-size:clamp(44px,6.4vw,78px);line-height:1.08;margin-bottom:20px;}
+.hero p.sub{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,20px);color:var(--dim);max-width:620px;margin:0 auto 30px;}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
 .hero-strip{
   border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:14px 0;width:100%;max-width:var(--maxw);
+  position:relative;z-index:2;padding:14px 0;width:100%;max-width:var(--maxw);
   font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim2);
   display:flex;justify-content:center;gap:14px;flex-wrap:wrap;
 }
@@ -592,6 +592,42 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
   .trust-item:last-child{border-bottom:none;}
 }
 
+/* ---------- HERO ARCHES ---------- */
+.hero-arches{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;gap:16px;width:100%;max-width:1000px;margin:0 auto 24px;}
+.arch{position:relative;flex:1 1 0;min-width:0;overflow:hidden;border-radius:999px 999px 0 0;border:1px solid rgba(201,162,75,0.55);border-bottom:none;background:var(--bg2);box-shadow:0 18px 40px rgba(0,0,0,0.55);animation:archRise .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * .11s + .25s);}
+.arch img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.98) brightness(0.94);transition:transform .9s ease,filter .4s ease;}
+.arch::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(11,6,5,0.7));pointer-events:none;}
+.arch:hover img{transform:scale(1.07);filter:saturate(1.08) brightness(1.03);}
+.arch span{position:absolute;left:0;right:0;bottom:12px;z-index:2;text-align:center;font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);}
+.arch.a1,.arch.a5{height:164px;}
+.arch.a2,.arch.a4{height:212px;}
+.arch.a3{height:256px;}
+@keyframes archRise{from{opacity:0;transform:translateY(34px);}to{opacity:1;transform:translateY(0);}}
+@media(prefers-reduced-motion:reduce){.arch{animation:none;}}
+@media(max-width:700px){
+  .hero-arches{gap:10px;margin-bottom:26px;}
+  .arch.a1,.arch.a5{display:none;}
+  .arch.a2,.arch.a4{height:150px;}
+  .arch.a3{height:190px;}
+  .arch span{font-size:8.5px;letter-spacing:0.12em;bottom:9px;}
+}
+
+@media(max-height:800px) and (min-width:701px){
+  .hero{padding-top:92px;}
+  .hero h1{font-size:clamp(44px,5.4vw,64px);margin-bottom:16px;}
+  .hero-ctas{margin-bottom:26px;}
+  .arch.a1,.arch.a5{height:128px;}
+  .arch.a2,.arch.a4{height:162px;}
+  .arch.a3{height:196px;}
+}
+
+/* ---------- WHAT-IS PHOTO ---------- */
+.whatis-photo{position:relative;margin:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;aspect-ratio:3/2;}
+.whatis-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.92) saturate(0.96);}
+.whatis-photo figcaption{position:absolute;left:0;right:0;top:0;padding:14px 18px 30px;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-light);background:linear-gradient(180deg,rgba(11,6,5,0.8),transparent);}
+.whatis-visual .facts-panel{position:relative;margin:-64px 22px 0;box-shadow:0 22px 44px rgba(0,0,0,0.55);}
+@media(max-width:900px){.whatis-visual .facts-panel{margin:-48px 14px 0;}}
+
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
   .nav-links{display:none;}
@@ -694,6 +730,13 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <a href="#experience" class="btn btn-outline">Discover the Journey</a>
     </div>
   </div>
+  <div class="hero-arches" aria-label="Scenes from Kolkata's Durga Puja">
+    <div class="arch a1" style="--i:0"><img src="images/photo-7.jpg" alt="Goddess Durga idol glowing in red light" width="320" height="372" decoding="async" style="object-position:50% 30%"><span>The Goddess</span></div>
+    <div class="arch a2" style="--i:1"><img src="images/puja_dakshineswar_temple.jpg" alt="Dakshineswar temple lit up at night" width="480" height="320" decoding="async" style="object-position:30% 50%"><span>Sacred Temples</span></div>
+    <div class="arch a3" style="--i:2"><img src="images/photo-6.jpg" alt="Close-up of a gilded Durga idol" width="320" height="448" decoding="async" style="object-position:50% 28%"><span>Devi Durga</span></div>
+    <div class="arch a4" style="--i:3"><img src="images/puja_bisarjan_ganges.jpg" alt="An idol being immersed in the Ganges at sunset, lit by lamps" width="480" height="320" decoding="async" style="object-position:22% 50%"><span>Bisarjan</span></div>
+    <div class="arch a5" style="--i:4"><img src="images/puja_heritage_haveli.jpg" alt="A heritage mansion glowing with lights during the festival" width="480" height="320" decoding="async" style="object-position:50% 50%"><span>Heritage Houses</span></div>
+  </div>
   <div class="hero-strip">
     <span>KOLKATA, INDIA</span><span class="sep">·</span><span>16–21 OCTOBER 2026</span><span class="sep">·</span><span>OUR FOUNDING SEASON</span><span class="sep">·</span><span>SPACES LIMITED TO 8 GUESTS PER COHORT</span>
   </div>
@@ -758,10 +801,13 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
         <p>In Kolkata it grew into something larger. Each neighbourhood committee raises a temporary pavilion, a <em>pandal</em>, and installs the goddess inside it. Some pandals are traditional shrines. Others are full-scale replicas of temples and monuments, or immersive installations built by professional theme-makers. More than 3,000 appear across Kolkata and its suburbs every year.</p>
         <p>In December 2021 UNESCO inscribed Durga Puja in Kolkata on its list of the Intangible Cultural Heritage of Humanity, recognising how a whole city turns into a public art event.</p>
       </div>
-      <div class="facts-panel reveal">
+      <div class="whatis-visual reveal">
+      <figure class="whatis-photo"><img src="images/puja_sindur_foreign_guest.jpg" alt="Bengali women and a visiting guest playing Sindur Khela with vermilion" loading="lazy" width="768" height="512"><figcaption>Sindur Khela on Vijaya Dashami</figcaption></figure>
+      <div class="facts-panel">
         <div class="fact-row"><div class="fact-num">3,000+</div><div class="fact-txt"><b>Pandals</b>across Kolkata and its suburbs each year</div></div>
         <div class="fact-row"><div class="fact-num">5</div><div class="fact-txt"><b>Days of worship</b>Shashthi to Vijaya Dashami, 16&ndash;21 October 2026</div></div>
         <div class="fact-row"><div class="fact-num">2021</div><div class="fact-txt"><b>UNESCO inscription</b>Intangible Cultural Heritage of Humanity</div></div>
+      </div>
       </div>
     </div>
 
