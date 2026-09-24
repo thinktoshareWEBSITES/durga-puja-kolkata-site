@@ -148,22 +148,6 @@ section{padding:80px 0;position:relative;}
 .howit-step:not(:last-child)::after{content:'→';position:absolute;right:-13px;top:36px;color:var(--gold);font-size:16px;z-index:2;display:none;}
 @media(min-width:901px){.howit-step:not(:last-child)::after{display:block;}}
 
-/* ---------- QUIZ / FIND YOUR JOURNEY ---------- */
-.quiz{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:48px;max-width:900px;margin:0 auto;}
-.quiz-row{margin-bottom:30px;}
-.quiz-row:last-child{margin-bottom:0;}
-.quiz-label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.quiz-opts{display:flex;gap:10px;flex-wrap:wrap;}
-.quiz-opt{
-  padding:11px 18px;border:1px solid var(--border);border-radius:30px;
-  font-size:13px;cursor:pointer;background:transparent;color:var(--dim);
-  transition:all .2s;font-family:var(--sans);
-}
-.quiz-opt:hover{border-color:var(--gold);color:var(--cream);}
-.quiz-opt.active{background:var(--gold);border-color:var(--gold);color:#180d05;font-weight:600;}
-.quiz-result{margin-top:34px;padding-top:30px;border-top:1px solid var(--border);text-align:center;min-height:30px;}
-.quiz-result span{color:var(--gold-light);font-family:var(--serif);font-size:19px;font-style:italic;}
-
 /* ---------- RITUAL STORY ROWS ---------- */
 .story-row{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:70px 0;border-bottom:1px solid var(--border);}
 .story-row:last-child{border-bottom:none;}
@@ -628,6 +612,15 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 .whatis-visual .facts-panel{position:relative;margin:-64px 22px 0;box-shadow:0 22px 44px rgba(0,0,0,0.55);}
 @media(max-width:900px){.whatis-visual .facts-panel{margin:-48px 14px 0;}}
 
+/* ---------- FIVE-STAR STAYS ---------- */
+.stars{display:inline-flex;align-items:center;gap:2px;vertical-align:middle;}
+.stars svg{width:13px;height:13px;fill:var(--gold-light);}
+.star-i{display:inline-block;width:12px;height:12px;fill:var(--gold-light);vertical-align:-1px;margin-left:4px;}
+.fivestar-chip{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:9px 20px;border:1px solid var(--border);border-radius:30px;background:rgba(201,162,75,0.07);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-light);}
+.fivestar-chip .stars svg{width:14px;height:14px;}
+.compare .stay-name{display:block;margin-top:6px;}
+.compare .stay-name b{color:var(--gold-light);font-weight:600;}
+
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
   .nav-links{display:none;}
@@ -673,6 +666,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="star" viewBox="0 0 60 60"><path d="M30 6 L36.17 22.51 L53.78 23.27 L39.99 34.24 L44.69 51.23 L30 41.5 L15.31 51.23 L20.01 34.24 L6.22 23.27 L23.83 22.51 Z"/></symbol></svg>
 
 <!-- ============ HEADER ============ -->
 <header>
@@ -789,6 +783,113 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
     <span class="fact"><b>5 DAYS</b>OF SACRED RITUAL</span>
   </div>
 </div>
+
+<!-- ============ TRUST BAR (NEW) ============ -->
+<div class="trust-bar">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><circle cx="30" cy="30" r="23"/><path d="M30 14 L34.5 25.5 L47 26 L37.3 33.6 L40.6 45.5 L30 38.8 L19.4 45.5 L22.7 33.6 L13 26 L25.5 25.5Z"/></svg>
+        <div><b>UNESCO-listed festival</b><span>Heritage of Humanity, 2021</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><rect x="13" y="27" width="34" height="24" rx="2"/><path d="M21 27 V20 a9 9 0 0 1 18 0 V27"/><circle cx="30" cy="38" r="3"/><path d="M30 41 V45"/></svg>
+        <div><b>Eight guests, no more</b><span>Private cohorts, never a bus tour</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M9 31 L30 12 L51 31"/><path d="M15 27 V49 H45 V27"/><path d="M25 49 V36 H35 V49"/></svg>
+        <div><b>Kolkata-born hosts</b><span>We grew up inside this festival</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M10 31 L31 10 H50 V29 L29 50 Z"/><circle cx="40" cy="20" r="3.2"/></svg>
+        <div><b>Priced honestly</b><span>Transparent from the first quote</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Choose Your Immersion</div>
+      <h2>Your <span class="accent">Journey</span></h2>
+      <p>Each experience is private, limited to eight guests, and priced honestly from the first quote.</p>
+      <div class="currency-toggle" id="currencyToggle">
+        <button type="button"class="curr-opt active" data-curr="USD">USD $</button>
+        <button type="button"class="curr-opt" data-curr="EUR">EUR €</button>
+        <button type="button"class="curr-opt" data-curr="GBP">GBP £</button>
+        <button type="button"class="curr-opt" data-curr="INR">INR ₹</button>
+      </div>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="tier" data-tier="value">
+        <div class="tier-name">The Essence</div>
+        <h3>5 Days</h3>
+        <div class="dates">4 Nights · Shashthi to Vijaya Dashami · 17–21 Oct</div>
+        <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="2800">2,800</span></div>
+        <div class="price-note">per person · double occupancy</div>
+        <ul>
+          <li><span>4 nights in a 5-star heritage boutique hotel <svg class="star-i"><use href="#star"/></svg></span></li>
+          <li>Curated pandal circuit with expert guide</li>
+          <li>Private Kumartuli artisan studio visit</li>
+          <li>Sindur Khela participation on Dashami</li>
+          <li>Bisarjan viewing from a private ghat</li>
+          <li>All breakfasts &amp; 3 curated cultural dinners</li>
+          <li>Private transfers throughout</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Reserve This Journey</a>
+      </div>
+
+      <div class="tier featured" data-tier="depth">
+        <div class="tier-badge">Most Chosen</div>
+        <div class="tier-name" style="margin-top:8px;">The Immersion</div>
+        <h3>8 Days</h3>
+        <div class="dates">7 Nights · Chaturthi to Vijaya Dashami · 14–21 Oct</div>
+        <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="4900">4,900</span></div>
+        <div class="price-note">per person · double occupancy</div>
+        <ul>
+          <li>Everything in The Essence</li>
+          <li>Early low-crowd pandal hopping from Chaturthi</li>
+          <li>Shashthi Bodhon ceremony witnessed live</li>
+          <li>Private Dhunuchi Naach lesson</li>
+          <li>Authentic Bengali home kitchen experience</li>
+          <li>Exclusive after-dark pandal access</li>
+          <li>Handwoven Dhaniakhali silk sari gifting</li>
+          <li>All meals included throughout</li>
+          <li>Dedicated personal cultural concierge</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">Reserve This Journey</a>
+      </div>
+
+      <div class="tier" data-tier="ultimate">
+        <div class="tier-name">The Connoisseur</div>
+        <h3>12 Days</h3>
+        <div class="dates">11 Nights · Mahalaya to Vijaya Dashami · 10–21 Oct</div>
+        <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="8500">8,500</span></div>
+        <div class="price-note">per person · double occupancy</div>
+        <ul>
+          <li>Everything in The Immersion</li>
+          <li>Exclusive pre-dawn Mahalaya ceremony on the Ganges</li>
+          <li><span>5-star private heritage haveli accommodation <svg class="star-i"><use href="#star"/></svg></span></li>
+          <li>Commission a Kumartuli idol in your name</li>
+          <li>Exclusive zamindar family puja access</li>
+          <li>Street food walk with a celebrated food writer</li>
+          <li>Darjeeling hill excursion by private car</li>
+          <li>Photography masterclass during the festival</li>
+          <li>Personal assistant throughout entire stay</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Reserve This Journey</a>
+      </div>
+    </div>
+
+    <div class="entry-note reveal">
+      Only have an evening, or extending a longer India trip? <a href="#contact">Ask about our Evening at the Pandals experience</a> — a private half-day taste of the festival, from $295 per person.
+    </div>
+    <div class="entry-note reveal" style="margin-top:14px;"><a href="#compare">Compare all three journeys side by side</a></div>
+  </div>
+</section>
 
 <!-- ============ WHAT IS DURGA PUJA (NEW) ============ -->
 <section id="what-is">
@@ -1030,45 +1131,6 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
         <h4>Arrive &amp; Be Met</h4>
         <p>Your cultural concierge meets you in Kolkata. From there, we handle everything.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FIND YOUR JOURNEY (NEW) ============ -->
-<section id="quiz-section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Not Sure Where to Begin?</div>
-      <h2>Find Your <span class="accent">Journey</span></h2>
-      <p>Answer three questions — we'll point you to the right immersion. Takes thirty seconds.</p>
-    </div>
-    <div class="quiz reveal">
-      <div class="quiz-row">
-        <div class="quiz-label">Who's travelling?</div>
-        <div class="quiz-opts" data-group="who">
-          <button type="button"class="quiz-opt" data-val="first">First time in India</button>
-          <button type="button"class="quiz-opt" data-val="bengali">Bengali, coming home</button>
-          <button type="button"class="quiz-opt" data-val="couple">A couple</button>
-          <button type="button"class="quiz-opt" data-val="already">Already in India</button>
-        </div>
-      </div>
-      <div class="quiz-row">
-        <div class="quiz-label">How long can you stay?</div>
-        <div class="quiz-opts" data-group="how">
-          <button type="button"class="quiz-opt" data-val="short">4–5 days</button>
-          <button type="button"class="quiz-opt" data-val="medium">About a week</button>
-          <button type="button"class="quiz-opt" data-val="long">The full festival arc</button>
-        </div>
-      </div>
-      <div class="quiz-row">
-        <div class="quiz-label">What matters most?</div>
-        <div class="quiz-opts" data-group="what">
-          <button type="button"class="quiz-opt" data-val="value">Smart value, still private</button>
-          <button type="button"class="quiz-opt" data-val="depth">Depth &amp; access</button>
-          <button type="button"class="quiz-opt" data-val="ultimate">The absolute maximum</button>
-        </div>
-      </div>
-      <div class="quiz-result" id="quizResult"></div>
     </div>
   </div>
 </section>
@@ -1370,7 +1432,6 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
         <h3>Our <span class="accent">Story</span></h3>
         <p>Durga Puja Kolkata began with a simple frustration: watching visitors arrive for the world's greatest festival and leave having seen it only from the far side of a barricade — a spectacle glimpsed between someone else's shoulders.</p>
         <p>We grew up inside this festival — not as tour operators, but as Kolkata natives for whom Ashtami evenings and Kumartuli's clay-scented lanes were simply home. The relationships that make a different kind of journey possible are ones we've held personally, long before we thought to share them with anyone else.</p>
-        <p><strong style="color:var(--cream)">October 2026 is our founding season.</strong> We've built this practice deliberately small from the ground up — because the moment a group grows past a handful of people, the doors that matter start to close.</p>
       </div>
       <div class="story-visual illustration">
         <svg viewBox="0 0 200 200"><g stroke="#c9a24b" stroke-width="1" fill="none" opacity="0.8"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="42"/><path d="M100 40 L100 160 M40 100 L160 100" stroke-width="0.6"/></g><circle cx="100" cy="100" r="5" fill="#c9a24b"/></svg>
@@ -1401,112 +1462,6 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
   </div>
 </section>
 
-<!-- ============ TRUST BAR (NEW) ============ -->
-<div class="trust-bar">
-  <div class="wrap">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><circle cx="30" cy="30" r="23"/><path d="M30 14 L34.5 25.5 L47 26 L37.3 33.6 L40.6 45.5 L30 38.8 L19.4 45.5 L22.7 33.6 L13 26 L25.5 25.5Z"/></svg>
-        <div><b>UNESCO-recognised festival</b><span>Intangible Cultural Heritage, 2021</span></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><rect x="13" y="27" width="34" height="24" rx="2"/><path d="M21 27 V20 a9 9 0 0 1 18 0 V27"/><circle cx="30" cy="38" r="3"/><path d="M30 41 V45"/></svg>
-        <div><b>Eight guests, no more</b><span>Private cohorts, never a bus tour</span></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M9 31 L30 12 L51 31"/><path d="M15 27 V49 H45 V27"/><path d="M25 49 V36 H35 V49"/></svg>
-        <div><b>Kolkata-born hosts</b><span>We grew up inside this festival</span></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 60 60" fill="none" stroke="#c9a24b" stroke-width="1.4" stroke-linejoin="round"><path d="M10 31 L31 10 H50 V29 L29 50 Z"/><circle cx="40" cy="20" r="3.2"/></svg>
-        <div><b>Priced honestly</b><span>Transparent from the first quote</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ PRICING ============ -->
-<section id="pricing">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Choose Your Immersion</div>
-      <h2>Your <span class="accent">Journey</span></h2>
-      <p>Each experience is private, limited to eight guests, and priced honestly from the first quote.</p>
-      <div class="currency-toggle" id="currencyToggle">
-        <button type="button"class="curr-opt active" data-curr="USD">USD $</button>
-        <button type="button"class="curr-opt" data-curr="EUR">EUR €</button>
-        <button type="button"class="curr-opt" data-curr="GBP">GBP £</button>
-        <button type="button"class="curr-opt" data-curr="INR">INR ₹</button>
-      </div>
-    </div>
-
-    <div class="pricing-grid reveal">
-      <div class="tier" data-tier="value">
-        <div class="tier-name">The Essence</div>
-        <h3>5 Days</h3>
-        <div class="dates">4 Nights · Shashthi to Vijaya Dashami · 17–21 Oct</div>
-        <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="2800">2,800</span></div>
-        <div class="price-note">per person · double occupancy</div>
-        <ul>
-          <li>4 nights in a heritage boutique hotel</li>
-          <li>Curated pandal circuit with expert guide</li>
-          <li>Private Kumartuli artisan studio visit</li>
-          <li>Sindur Khela participation on Dashami</li>
-          <li>Bisarjan viewing from a private ghat</li>
-          <li>All breakfasts &amp; 3 curated cultural dinners</li>
-          <li>Private transfers throughout</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline">Reserve This Journey</a>
-      </div>
-
-      <div class="tier featured" data-tier="depth">
-        <div class="tier-badge">Most Chosen</div>
-        <div class="tier-name" style="margin-top:8px;">The Immersion</div>
-        <h3>8 Days</h3>
-        <div class="dates">7 Nights · Chaturthi to Vijaya Dashami · 14–21 Oct</div>
-        <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="4900">4,900</span></div>
-        <div class="price-note">per person · double occupancy</div>
-        <ul>
-          <li>Everything in The Essence</li>
-          <li>Early low-crowd pandal hopping from Chaturthi</li>
-          <li>Shashthi Bodhon ceremony witnessed live</li>
-          <li>Private Dhunuchi Naach lesson</li>
-          <li>Authentic Bengali home kitchen experience</li>
-          <li>Exclusive after-dark pandal access</li>
-          <li>Handwoven Dhaniakhali silk sari gifting</li>
-          <li>All meals included throughout</li>
-          <li>Dedicated personal cultural concierge</li>
-        </ul>
-        <a href="#contact" class="btn btn-gold">Reserve This Journey</a>
-      </div>
-
-      <div class="tier" data-tier="ultimate">
-        <div class="tier-name">The Connoisseur</div>
-        <h3>12 Days</h3>
-        <div class="dates">11 Nights · Mahalaya to Vijaya Dashami · 10–21 Oct</div>
-        <div class="price"><sup class="curr-sym">$</sup><span class="curr-amt" data-usd="8500">8,500</span></div>
-        <div class="price-note">per person · double occupancy</div>
-        <ul>
-          <li>Everything in The Immersion</li>
-          <li>Exclusive pre-dawn Mahalaya ceremony on the Ganges</li>
-          <li>Private heritage haveli accommodation</li>
-          <li>Commission a Kumartuli idol in your name</li>
-          <li>Exclusive zamindar family puja access</li>
-          <li>Street food walk with a celebrated food writer</li>
-          <li>Darjeeling hill excursion by private car</li>
-          <li>Photography masterclass during the festival</li>
-          <li>Personal assistant throughout entire stay</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline">Reserve This Journey</a>
-      </div>
-    </div>
-
-    <div class="entry-note reveal">
-      Only have an evening, or extending a longer India trip? <a href="#contact">Ask about our Evening at the Pandals experience</a> — a private half-day taste of the festival, from $295 per person.
-    </div>
-  </div>
-</section>
-
 <!-- ============ COMPARE THE JOURNEYS (NEW) ============ -->
 <section id="compare" style="background:var(--bg2);border-top:1px solid var(--border);">
   <div class="wrap">
@@ -1514,6 +1469,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <div class="eyebrow">Side by side</div>
       <h2>What Each Journey <span class="accent">Includes</span></h2>
       <p>Every journey shares the same foundation. The longer ones add days, depth and access.</p>
+      <div class="fivestar-chip"><span class="stars" role="img" aria-label="Five stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>Every hotel and stay is five-star</div>
     </div>
     <div class="compare-wrap reveal">
       <table class="compare">
@@ -1545,7 +1501,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
           <tr><th scope="row">Commission a Kumartuli idol in your name</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
           <tr><th scope="row">Darjeeling excursion by private car</th><td class="no">&mdash;</td><td class="feat no">&mdash;</td><td class="yes">&#10003;</td></tr>
           <tr class="grp"><th scope="row">Comfort</th><td></td><td class="feat"></td><td></td></tr>
-          <tr><th scope="row">Where you stay</th><td>Heritage boutique hotel</td><td class="feat">Heritage boutique hotel</td><td>Private heritage haveli</td></tr>
+          <tr><th scope="row">Where you stay<br><span style="color:var(--gold-light);font-size:12px;">Every stay is five-star</span></th><td><span class="stars" role="img" aria-label="Five stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span class="stay-name"><b>5-star</b> heritage boutique hotel</span></td><td class="feat"><span class="stars" role="img" aria-label="Five stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span class="stay-name"><b>5-star</b> heritage boutique hotel</span></td><td><span class="stars" role="img" aria-label="Five stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><span class="stay-name"><b>5-star</b> private heritage haveli</span></td></tr>
           <tr><th scope="row">Meals</th><td>Breakfasts and 3 dinners</td><td class="feat">All meals</td><td>All meals</td></tr>
           <tr><th scope="row">Private transfers</th><td class="yes">&#10003;</td><td class="feat yes">&#10003;</td><td class="yes">&#10003;</td></tr>
           <tr><th scope="row">Personal support</th><td>Expert guide</td><td class="feat">Cultural concierge</td><td>Personal assistant</td></tr>
@@ -1587,8 +1543,8 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <div class="bld-row">
         <div class="bld-label">Where would you like to stay?</div>
         <div class="bld-opts" data-key="stay">
-          <button type="button" class="bld-opt" aria-pressed="false" data-val="a heritage boutique hotel">Heritage boutique hotel</button>
-          <button type="button" class="bld-opt" aria-pressed="false" data-val="a private heritage haveli">Private heritage haveli</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a 5-star heritage boutique hotel">5-star heritage boutique hotel</button>
+          <button type="button" class="bld-opt" aria-pressed="false" data-val="a 5-star private heritage haveli">5-star private heritage haveli</button>
           <button type="button" class="bld-opt" aria-pressed="false" data-val="whichever stay you recommend">Advise me</button>
         </div>
       </div>
@@ -1698,7 +1654,7 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <div class="value-card">
         <svg viewBox="0 0 44 44" fill="none" stroke="#c9a24b" stroke-width="1.3"><rect x="8" y="16" width="28" height="22" rx="1"/><path d="M8 16 L22 6 L36 16"/><path d="M18 38 L18 26 L26 26 L26 38"/></svg>
         <h4>Heritage Stays</h4>
-        <p>Boutique hotels and heritage properties that reflect the architectural and cultural soul of Bengal.</p>
+        <p>Five-star boutique hotels and heritage properties that reflect the architectural and cultural soul of Bengal.</p>
       </div>
       <div class="value-card">
         <svg viewBox="0 0 44 44" fill="none" stroke="#c9a24b" stroke-width="1.3"><circle cx="22" cy="22" r="15"/><path d="M22 14 L22 22 L28 26"/></svg>
@@ -2030,35 +1986,6 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     if(!wasOpen) item.classList.add('open');
   });
 });
-
-// Find Your Journey quiz
-const quizState = {who:null, how:null, what:null};
-document.querySelectorAll('.quiz-opts').forEach(group=>{
-  const key = group.dataset.group;
-  group.querySelectorAll('.quiz-opt').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      group.querySelectorAll('.quiz-opt').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      quizState[key] = btn.dataset.val;
-      updateQuizResult();
-    });
-  });
-});
-function updateQuizResult(){
-  const {who, how, what} = quizState;
-  if(!who || !how || !what) return;
-  let tier = 'depth';
-  if(what === 'value' || how === 'short') tier = 'value';
-  else if(what === 'ultimate' || how === 'long') tier = 'ultimate';
-  else tier = 'depth';
-  document.querySelectorAll('.tier').forEach(t=>t.style.outline = 'none');
-  const names = {value:'The Essence', depth:'The Immersion', ultimate:'The Connoisseur'};
-  const msg = who === 'bengali'
-    ? `We'd suggest <span>${names[tier]}</span> — plus explore our "Coming Home for Pujo" experience built specifically for the diaspora.`
-    : `Based on your answers, <span>${names[tier]}</span> looks like your best fit.`;
-  document.getElementById('quizResult').innerHTML = msg + ' <br><a href="#pricing" class="btn btn-gold" style="margin-top:16px;">See This Journey</a>';
-  document.querySelector(`.tier[data-tier="${tier}"]`).style.outline = '2px solid #c9a24b';
-}
 
 // Countdown to Shashthi (Friday 16 October 2026, IST)
 (function () {
