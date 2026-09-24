@@ -621,6 +621,13 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
 .compare .stay-name{display:block;margin-top:6px;}
 .compare .stay-name b{color:var(--gold-light);font-weight:600;}
 
+/* ---------- OUR STORY PHOTO ---------- */
+.story-row.with-photo{grid-template-columns:0.85fr 1.15fr;}
+.story-photo{position:relative;margin:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;box-shadow:0 24px 54px rgba(0,0,0,0.5);}
+.story-photo img{width:100%;height:auto;display:block;}
+.story-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 22px 14px;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-light);background:linear-gradient(0deg,rgba(11,6,5,0.88),transparent);}
+@media(max-width:900px){.story-row.with-photo{grid-template-columns:1fr;}}
+
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
   .nav-links{display:none;}
@@ -1427,16 +1434,16 @@ footer{padding:70px 0 30px;border-top:1px solid var(--border);}
       <h2>By Invitation. <span class="accent">By Devotion.</span></h2>
       <p>We are a small, Kolkata-based practice who believe Durga Puja should be entered, not observed.</p>
     </div>
-    <div class="story-row reveal" style="border-bottom:none;">
+    <div class="story-row with-photo reveal" style="border-bottom:none;">
       <div class="story-text">
         <h3>Our <span class="accent">Story</span></h3>
         <p>Durga Puja Kolkata began with a simple frustration: watching visitors arrive for the world's greatest festival and leave having seen it only from the far side of a barricade — a spectacle glimpsed between someone else's shoulders.</p>
         <p>We grew up inside this festival — not as tour operators, but as Kolkata natives for whom Ashtami evenings and Kumartuli's clay-scented lanes were simply home. The relationships that make a different kind of journey possible are ones we've held personally, long before we thought to share them with anyone else.</p>
       </div>
-      <div class="story-visual illustration">
-        <svg viewBox="0 0 200 200"><g stroke="#c9a24b" stroke-width="1" fill="none" opacity="0.8"><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="42"/><path d="M100 40 L100 160 M40 100 L160 100" stroke-width="0.6"/></g><circle cx="100" cy="100" r="5" fill="#c9a24b"/></svg>
-        <div class="cap">KOLKATA · DURGA PUJA</div>
-      </div>
+      <figure class="story-photo">
+        <img src="images/team-story.jpg" alt="Our team standing together in front of a festive Durga Puja backdrop, with the Howrah Bridge, the goddess and &quot;Shubho Durga Puja&quot; written in Bengali" width="1536" height="1024" loading="lazy">
+        <figcaption>Shubho Durga Puja, from all of us</figcaption>
+      </figure>
     </div>
 
     <div class="team-grid reveal">
